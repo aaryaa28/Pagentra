@@ -1,8 +1,16 @@
 import { Navbar } from "@/components/navbar";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Shield, Lock, Activity, Globe, CheckCircle2, ArrowRight, Server, Zap, ShieldCheck } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { Shield, Lock, Activity, Globe, CheckCircle2, ArrowRight, Server, Zap, ShieldCheck, Users, Lightbulb, Target, MapPin, Mail, Phone, Linkedin } from "lucide-react";
 import heroImage from '@assets/generated_images/abstract_high-tech_blue_cyber_security_shield_waves_on_white.png';
+import team1 from '@assets/stock_images/professional_busines_83a9284a.jpg';
+import team2 from '@assets/stock_images/professional_busines_de1a8db3.jpg';
+import team3 from '@assets/stock_images/professional_busines_c3fbcd0a.jpg';
+import mapImage from '@assets/stock_images/abstract_blue_world__7c0dd005.jpg';
+
 import { motion } from "framer-motion";
 
 const fadeInUp = {
@@ -40,7 +48,7 @@ export default function Home() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
                 </span>
-                New: AI-Powered Threat Detection 2.0
+                PageNTRA Infosec: Next Gen Security
               </motion.div>
               
               <motion.h1 variants={fadeInUp} className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold leading-[1.1] text-foreground mb-6">
@@ -50,8 +58,7 @@ export default function Home() {
               </motion.h1>
               
               <motion.p variants={fadeInUp} className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-lg">
-                SecureGuard provides enterprise-grade security infrastructure for the modern web. 
-                Stop threats before they reach your data.
+                Protecting your digital assets with innovative, client-centric, and adaptable security solutions.
               </motion.p>
               
               <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4">
@@ -61,21 +68,6 @@ export default function Home() {
                 <Button variant="outline" size="lg" className="h-12 px-8 text-base border-2">
                   View Demo
                 </Button>
-              </motion.div>
-              
-              <motion.div variants={fadeInUp} className="mt-12 flex items-center gap-8 text-sm text-muted-foreground">
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-primary" />
-                  <span>SOC2 Certified</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-primary" />
-                  <span>24/7 Support</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-primary" />
-                  <span>99.99% Uptime</span>
-                </div>
               </motion.div>
             </motion.div>
             
@@ -96,83 +88,235 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Trusted By */}
-      <section className="py-12 border-y bg-slate-50/50">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-sm font-medium text-muted-foreground mb-8 uppercase tracking-wider">Trusted by security teams at</p>
-          <div className="flex flex-wrap justify-center items-center gap-12 opacity-60 grayscale">
-            {/* Placeholder Logos using Text for specific style */}
-            <span className="text-2xl font-heading font-bold">ACME Corp</span>
-            <span className="text-2xl font-heading font-bold">Globex</span>
-            <span className="text-2xl font-heading font-bold">Soylent</span>
-            <span className="text-2xl font-heading font-bold">Umbrella</span>
-            <span className="text-2xl font-heading font-bold">Massive</span>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Grid */}
-      <section id="features" className="py-24 bg-background">
+      {/* Our Unique Approach (Products) */}
+      <section id="products" className="py-24 bg-slate-50">
         <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">Comprehensive Protection Layer</h2>
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">Our Unique Approach to Protect Digital Assets</h2>
             <p className="text-lg text-muted-foreground">
-              Our unified platform provides end-to-end security for your entire infrastructure, 
-              from cloud endpoints to user devices.
+              Comprehensive solutions designed to secure every layer of your digital presence.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
-            <FeatureCard 
-              icon={<Shield className="h-10 w-10 text-primary" />}
-              title="Real-time Threat Prevention"
-              description="AI-driven engine that detects and blocks zero-day attacks in milliseconds, before they execute."
+            <ProductCard 
+              title="SiteWALL Web Application Firewall"
+              description="Advanced filtering and monitoring of HTTP traffic to and from a web application. Protects against malicious SQL injection, XSS, and more."
+              icon={<Shield className="h-12 w-12 text-primary mb-4" />}
             />
-            <FeatureCard 
-              icon={<Globe className="h-10 w-10 text-primary" />}
-              title="Global Network Security"
-              description="Secure your network edge with our distributed firewall spanning 200+ global points of presence."
+            <ProductCard 
+              title="WEBSITE ASSESSMENT"
+              description="Comprehensive vulnerability scanning and penetration testing to identify weaknesses in your web infrastructure before attackers do."
+              icon={<Activity className="h-12 w-12 text-primary mb-4" />}
             />
-            <FeatureCard 
-              icon={<Activity className="h-10 w-10 text-primary" />}
-              title="Advanced Analytics"
-              description="Deep insights into your security posture with actionable intelligence and automated reporting."
-            />
-             <FeatureCard 
-              icon={<Lock className="h-10 w-10 text-primary" />}
-              title="Zero Trust Access"
-              description="Implement strict identity verification for every person and device trying to access resources."
-            />
-            <FeatureCard 
-              icon={<Server className="h-10 w-10 text-primary" />}
-              title="Cloud Workload Protection"
-              description="Secure your containers, serverless functions, and VMs across any cloud provider."
-            />
-             <FeatureCard 
-              icon={<Zap className="h-10 w-10 text-primary" />}
-              title="Automated Response"
-              description="Instantly isolate compromised assets and remediate threats without manual intervention."
+            <ProductCard 
+              title="Website Breach Fix"
+              description="Rapid incident response and remediation services to clean up compromised sites, restore data, and patch security holes immediately."
+              icon={<Lock className="h-12 w-12 text-primary mb-4" />}
             />
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 bg-primary text-primary-foreground relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop')] bg-cover bg-center opacity-10 mix-blend-overlay"></div>
-        <div className="container mx-auto px-4 relative z-10 text-center">
-          <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">Ready to secure your future?</h2>
-          <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
-            Join thousands of companies that trust SecureGuard for their enterprise security needs.
-            Get started with a 14-day free trial.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="h-14 px-8 text-lg font-semibold text-primary">
-              Start Free Trial
-            </Button>
-            <Button size="lg" className="h-14 px-8 text-lg font-semibold bg-transparent border-2 border-primary-foreground hover:bg-primary-foreground/10 text-primary-foreground">
-              Contact Sales
-            </Button>
+      {/* About Us */}
+      <section id="about" className="py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="relative">
+              <div className="absolute -inset-4 bg-blue-100 rounded-xl transform -rotate-3"></div>
+              <div className="relative bg-white p-8 rounded-xl shadow-xl border">
+                <ShieldCheck className="h-16 w-16 text-primary mb-6" />
+                <h3 className="text-2xl font-bold font-heading mb-4">PageNTRA Infosec</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Founded in 2018, our company has grown from a small startup into a leading player in the tech industry.
+                </p>
+              </div>
+            </div>
+            <div>
+              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">About Us</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                At PageNTRA Infosec we're driven by a passion for technology and a commitment to making a positive impact on the world.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Known for our innovative solutions, exceptional customer service, and dedication to excellence, we strive to secure the digital future for businesses of all sizes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section id="why-us" className="py-24 bg-primary text-primary-foreground relative overflow-hidden">
+        {/* Abstract background pattern */}
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent" />
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">Why Choose Us</h2>
+            <p className="text-blue-100 text-lg">Excellence is not just a goal, it's our standard.</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 text-center">
+            <div className="p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20">
+              <div className="inline-flex p-4 rounded-full bg-white/20 mb-6">
+                <Lightbulb className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold mb-3">Innovation and Quality</h3>
+              <p className="text-blue-100">We constantly push the boundaries of what's possible in cybersecurity.</p>
+            </div>
+            <div className="p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20">
+               <div className="inline-flex p-4 rounded-full bg-white/20 mb-6">
+                <Target className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold mb-3">CLIENT CENTRIC</h3>
+              <p className="text-blue-100">Your security needs are unique, and our solutions are tailored to fit you perfectly.</p>
+            </div>
+            <div className="p-6 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20">
+               <div className="inline-flex p-4 rounded-full bg-white/20 mb-6">
+                <Zap className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold mb-3">ADAPTABILITY</h3>
+              <p className="text-blue-100">In a rapidly changing threat landscape, we evolve faster than the attackers.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trusted By */}
+      <section className="py-16 bg-slate-50 border-y">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-10">
+            <h3 className="text-xl font-heading font-bold text-muted-foreground uppercase tracking-wider">Trusted By Clients & Partners</h3>
+          </div>
+          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-60 grayscale">
+            {/* Placeholder Logos */}
+            <span className="text-2xl md:text-3xl font-heading font-bold flex items-center gap-2"><Globe className="h-8 w-8"/> GlobalTech</span>
+            <span className="text-2xl md:text-3xl font-heading font-bold flex items-center gap-2"><Server className="h-8 w-8"/> DataCorp</span>
+            <span className="text-2xl md:text-3xl font-heading font-bold flex items-center gap-2"><Shield className="h-8 w-8"/> SecureNet</span>
+            <span className="text-2xl md:text-3xl font-heading font-bold flex items-center gap-2"><Activity className="h-8 w-8"/> FinGuard</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Team */}
+      <section id="team" className="py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">Meet Our Team</h2>
+            <p className="text-lg text-muted-foreground">The experts behind your security.</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <TeamCard 
+              image={team1} 
+              name="Sarah Jenkins" 
+              role="Chief Technology Officer" 
+              linkedin="#"
+            />
+             <TeamCard 
+              image={team2} 
+              name="David Chen" 
+              role="Head of Security Operations" 
+              linkedin="#"
+            />
+             <TeamCard 
+              image={team3} 
+              name="Michael Ross" 
+              role="Lead Penetration Tester" 
+              linkedin="#"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-24 bg-slate-50">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">Get in Touch</h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                Ready to secure your digital assets? Contact us for a consultation or quote.
+              </p>
+
+              <div className="space-y-6 mb-12">
+                <div className="flex items-start gap-4">
+                  <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                    <MapPin className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold">Our Location</h4>
+                    <p className="text-muted-foreground">123 Cyber Park Blvd, Suite 400<br/>Tech City, CA 94000</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                    <Mail className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold">Email Us</h4>
+                    <p className="text-muted-foreground">contact@pagentra.com</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                    <Phone className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold">Call Us</h4>
+                    <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Map Illustration */}
+              <div className="rounded-xl overflow-hidden shadow-lg border h-64 relative">
+                 <img 
+                  src={mapImage} 
+                  alt="Office Location Map" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-primary/20 flex items-center justify-center">
+                  <Button variant="secondary" className="shadow-lg pointer-events-none">
+                    <MapPin className="mr-2 h-4 w-4" /> View on Google Maps
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            <Card className="shadow-xl">
+              <CardHeader>
+                <CardTitle>Send us a Message</CardTitle>
+                <CardDescription>Fill out the form below and we'll get back to you shortly.</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="first-name">First name</Label>
+                    <Input id="first-name" placeholder="John" />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="last-name">Last name</Label>
+                    <Input id="last-name" placeholder="Doe" />
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="email">Email</Label>
+                  <Input id="email" type="email" placeholder="john@example.com" />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="company">Company</Label>
+                  <Input id="company" placeholder="Acme Inc." />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="message">Message</Label>
+                  <Textarea id="message" placeholder="How can we help you?" className="min-h-[120px]" />
+                </div>
+              </CardContent>
+              <CardFooter>
+                <Button className="w-full h-11 text-base">Send Message</Button>
+              </CardFooter>
+            </Card>
           </div>
         </div>
       </section>
@@ -180,45 +324,18 @@ export default function Home() {
       {/* Footer */}
       <footer className="py-12 bg-slate-900 text-slate-300">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8 mb-12">
-            <div>
-              <div className="flex items-center gap-2 font-heading font-bold text-xl text-white mb-4">
-                <ShieldCheck className="h-6 w-6 text-primary" />
-                <span>SecureGuard</span>
-              </div>
-              <p className="text-sm leading-relaxed text-slate-400">
-                Next-generation cybersecurity platform for the modern enterprise.
-              </p>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            <div className="flex items-center gap-2 font-heading font-bold text-xl text-white">
+              <ShieldCheck className="h-6 w-6 text-primary" />
+              <span>PageNTRA Infosec</span>
             </div>
-            <div>
-              <h4 className="font-bold text-white mb-4">Product</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-primary">Features</a></li>
-                <li><a href="#" className="hover:text-primary">Integrations</a></li>
-                <li><a href="#" className="hover:text-primary">Pricing</a></li>
-                <li><a href="#" className="hover:text-primary">Roadmap</a></li>
-              </ul>
+            <div className="text-sm text-slate-500">
+              © {new Date().getFullYear()} PageNTRA Infosec. All rights reserved.
             </div>
-            <div>
-              <h4 className="font-bold text-white mb-4">Company</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-primary">About Us</a></li>
-                <li><a href="#" className="hover:text-primary">Careers</a></li>
-                <li><a href="#" className="hover:text-primary">Blog</a></li>
-                <li><a href="#" className="hover:text-primary">Contact</a></li>
-              </ul>
+            <div className="flex gap-6">
+              <a href="#" className="hover:text-primary transition-colors"><Linkedin className="h-5 w-5"/></a>
+              <a href="#" className="hover:text-primary transition-colors"><Globe className="h-5 w-5"/></a>
             </div>
-            <div>
-              <h4 className="font-bold text-white mb-4">Legal</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-primary">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-primary">Terms of Service</a></li>
-                <li><a href="#" className="hover:text-primary">Cookie Policy</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="pt-8 border-t border-slate-800 text-center text-sm text-slate-500">
-            © {new Date().getFullYear()} SecureGuard Inc. All rights reserved.
           </div>
         </div>
       </footer>
@@ -226,17 +343,41 @@ export default function Home() {
   );
 }
 
-function FeatureCard({ icon, title, description }: { icon: React.ReactNode, title: string, description: string }) {
+function ProductCard({ icon, title, description }: { icon: React.ReactNode, title: string, description: string }) {
   return (
-    <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
-      <CardContent className="p-8">
-        <div className="h-14 w-14 rounded-2xl bg-blue-50 flex items-center justify-center mb-6">
+    <Card className="hover:shadow-xl transition-all duration-300 group border-t-4 border-t-primary">
+      <CardHeader>
+        <div className="group-hover:scale-110 transition-transform duration-300 origin-left">
           {icon}
         </div>
-        <h3 className="text-xl font-bold mb-3 font-heading">{title}</h3>
-        <p className="text-muted-foreground leading-relaxed">
+        <CardTitle className="font-heading text-xl uppercase tracking-tight">{title}</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <p className="text-muted-foreground mb-6 h-20">
           {description}
         </p>
+        <Button className="w-full group-hover:bg-primary/90" asChild>
+          <a href="#">Learn More <ArrowRight className="ml-2 h-4 w-4" /></a>
+        </Button>
+      </CardContent>
+    </Card>
+  )
+}
+
+function TeamCard({ image, name, role, linkedin }: { image: string, name: string, role: string, linkedin: string }) {
+  return (
+    <Card className="overflow-hidden border-0 shadow-lg group">
+      <div className="h-64 overflow-hidden relative">
+        <img src={image} alt={name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+          <a href={linkedin} className="text-white hover:text-primary transition-colors flex items-center gap-2 font-medium">
+            <Linkedin className="h-5 w-5" /> Connect on LinkedIn
+          </a>
+        </div>
+      </div>
+      <CardContent className="p-6 text-center">
+        <h3 className="text-xl font-bold font-heading mb-1">{name}</h3>
+        <p className="text-primary font-medium">{role}</p>
       </CardContent>
     </Card>
   )

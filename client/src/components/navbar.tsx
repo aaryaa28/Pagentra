@@ -9,15 +9,16 @@ export function Navbar() {
         <Link href="/">
           <a className="flex items-center gap-2 font-heading font-bold text-xl text-primary cursor-pointer hover:opacity-90 transition-opacity">
             <ShieldCheck className="h-8 w-8" strokeWidth={2.5} />
-            <span className="text-foreground tracking-tight">SecureGuard</span>
+            <span className="text-foreground tracking-tight">PageNTRA</span>
           </a>
         </Link>
 
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-muted-foreground">
-          <a href="#features" className="hover:text-primary transition-colors">Features</a>
-          <a href="#solutions" className="hover:text-primary transition-colors">Solutions</a>
-          <a href="#pricing" className="hover:text-primary transition-colors">Pricing</a>
+          <a href="#products" className="hover:text-primary transition-colors">Products</a>
           <a href="#about" className="hover:text-primary transition-colors">About</a>
+          <a href="#why-us" className="hover:text-primary transition-colors">Why Us</a>
+          <a href="#team" className="hover:text-primary transition-colors">Team</a>
+          <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
         </div>
 
         <div className="flex items-center gap-4">
