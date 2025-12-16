@@ -10,6 +10,7 @@ import team1 from '@assets/stock_images/professional_busines_83a9284a.jpg';
 import team2 from '@assets/stock_images/professional_busines_de1a8db3.jpg';
 import team3 from '@assets/stock_images/professional_busines_c3fbcd0a.jpg';
 import mapImage from '@assets/stock_images/abstract_blue_world__7c0dd005.jpg';
+import { BackgroundAnimation } from "@/components/background-animation";
 
 import { motion, useScroll, useTransform, Variants } from "framer-motion";
 
@@ -36,14 +37,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background font-sans text-foreground selection:bg-primary/30">
       <Navbar />
-      
-      {/* Background Grid Animation */}
-      <div className="fixed inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0 bg-grid-pattern opacity-[0.03]"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-background via-transparent to-background"></div>
-        <div className="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] bg-primary/5 blur-[150px] rounded-full animate-pulse"></div>
-        <div className="absolute top-[40%] -right-[10%] w-[40%] h-[40%] bg-secondary/10 blur-[150px] rounded-full"></div>
-      </div>
+      <BackgroundAnimation />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-32 overflow-hidden z-10 min-h-screen flex items-center">
