@@ -1,9 +1,6 @@
 import { Navbar } from "@/components/navbar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
 import { Shield, Lock, Activity, Globe, CheckCircle2, ArrowRight, Server, Zap, ShieldCheck, Users, Lightbulb, Target, MapPin, Mail, Phone, Linkedin, Cpu, Network } from "lucide-react";
 import heroImage from '@assets/generated_images/futuristic_glowing_neon_cyber_shield_on_dark_background.png';
 import team1 from '@assets/stock_images/professional_busines_83a9284a.jpg';
@@ -11,6 +8,7 @@ import team2 from '@assets/stock_images/professional_busines_de1a8db3.jpg';
 import team3 from '@assets/stock_images/professional_busines_c3fbcd0a.jpg';
 import mapImage from '@assets/stock_images/abstract_blue_world__7c0dd005.jpg';
 import { BackgroundAnimation } from "@/components/background-animation";
+import { ContactForm } from "@/components/contact-form";
 
 import { motion, useScroll, useTransform, Variants } from "framer-motion";
 
@@ -349,27 +347,7 @@ export default function Home() {
               <h3 className="text-2xl font-bold text-white mb-2">SEND MESSAGE</h3>
               <p className="text-slate-400 mb-8">We usually respond within 24 hours.</p>
               
-              <div className="space-y-6">
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="first-name" className="text-slate-300">First name</Label>
-                    <Input id="first-name" placeholder="John" className="bg-black/50 border-white/10 focus:border-primary/50 text-white placeholder:text-white/20 h-12" />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="last-name" className="text-slate-300">Last name</Label>
-                    <Input id="last-name" placeholder="Doe" className="bg-black/50 border-white/10 focus:border-primary/50 text-white placeholder:text-white/20 h-12" />
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="email" className="text-slate-300">Email</Label>
-                  <Input id="email" type="email" placeholder="john@example.com" className="bg-black/50 border-white/10 focus:border-primary/50 text-white placeholder:text-white/20 h-12" />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="message" className="text-slate-300">Message</Label>
-                  <Textarea id="message" placeholder="How can we help you?" className="min-h-[150px] bg-black/50 border-white/10 focus:border-primary/50 text-white placeholder:text-white/20 resize-none" />
-                </div>
-                <Button className="w-full h-14 text-base font-bold bg-white text-black hover:bg-primary hover:text-black transition-all">SEND TRANSMISSION</Button>
-              </div>
+              <ContactForm />
             </div>
           </div>
         </div>
