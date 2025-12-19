@@ -43,7 +43,7 @@ export class MockStorage implements IStorage {
       firstName: submission.firstName,
       lastName: submission.lastName,
       email: submission.email,
-      company: submission.company,
+      company: submission.company ?? null,
       message: submission.message,
       createdAt: new Date()
     };

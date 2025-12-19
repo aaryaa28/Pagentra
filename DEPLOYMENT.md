@@ -17,7 +17,7 @@
 ### 3. Environment Variables
 Update these in your production environment:
 - `DOMAIN=yourdomain.com`
-- `BASE_URL=https://yourdomain.com`
+- `BASE_URL=https://yourdomain.com``
 - `NODE_ENV=production`
 - `PORT=3000` (or your preferred port)
 - `DATABASE_URL=` (your production database)
