@@ -1,3 +1,7 @@
+// Database setup temporarily disabled for development
+// Uncomment and configure when ready to add database back
+
+/*
 import { drizzle } from "drizzle-orm/node-postgres";
 import pg from "pg";
 import * as schema from "@shared/schema";
@@ -13,3 +17,4 @@ export const client = new pg.Pool({
 });
 
 export const db = drizzle(client, { schema });
+*/

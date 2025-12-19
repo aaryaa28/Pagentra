@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { ShieldCheck } from "lucide-react";
+import logoTransparent from '@assets/logos/Transparent_Logo.png';
 
 export function Navbar() {
   return (
@@ -9,11 +9,13 @@ export function Navbar() {
         <Link href="/" className="flex items-center gap-2 group">
           <div className="relative">
             <div className="absolute inset-0 bg-primary/20 blur-lg rounded-full group-hover:bg-primary/40 transition-all"></div>
-            <ShieldCheck className="h-9 w-9 text-primary relative z-10" strokeWidth={2} />
+            <img 
+
+              src={logoTransparent} 
+              alt="PageNTRA Logo" 
+              className="h-26 w-auto relative z-10 group-hover:scale-105 transition-transform"
+            />
           </div>
-          <span className="font-heading font-bold text-2xl text-white tracking-widest group-hover:text-primary transition-colors">
-            PAGE<span className="text-primary">NTRA</span>
-          </span>
         </Link>
 
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
@@ -33,7 +35,7 @@ export function Navbar() {
           <Link href="/login" className="hidden md:block text-sm font-medium text-slate-300 hover:text-white transition-colors">
             LOG IN
           </Link>
-          <Button size="sm" className="bg-primary text-background font-bold hover:bg-primary/90 hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all border-none">
+          <Button size="sm" className="bg-primary text-background font-bold hover:bg-primary/90 hover:shadow-[0_0_20px_rgba(61,186,235,0.4)] transition-all border-none">
             GET ACCESS
           </Button>
         </div>

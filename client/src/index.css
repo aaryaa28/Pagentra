@@ -60,16 +60,16 @@
   --popover: 222 47% 8%;
   --popover-foreground: 210 40% 98%;
 
-  --primary: 180 100% 50%; /* Neon Cyan */
+  --primary: 199 80% 58%; /* #3DBAEB - Custom Blue */
   --primary-foreground: 222 47% 11%;
 
-  --secondary: 260 100% 65%; /* Neon Purple */
+  --secondary: 199 67% 78%; /* #9AD0EF - Light Blue */
   --secondary-foreground: 210 40% 98%;
 
   --muted: 217 33% 17%;
   --muted-foreground: 215 20% 65%;
 
-  --accent: 180 100% 50%;
+  --accent: 199 80% 58%;
   --accent-foreground: 222 47% 11%;
 
   --destructive: 0 62.8% 30.6%;
@@ -77,7 +77,7 @@
 
   --border: 217 33% 20%;
   --input: 217 33% 20%;
-  --ring: 180 100% 50%;
+  --ring: 199 80% 58%;
 
   --radius: 0.5rem;
 }
@@ -93,10 +93,10 @@
   --popover: 222 47% 10%;
   --popover-foreground: 210 40% 98%;
 
-  --primary: 180 100% 50%;
+  --primary: 199 80% 58%;
   --primary-foreground: 222 47% 11%;
 
-  --secondary: 260 100% 65%;
+  --secondary: 199 67% 78%;
   --secondary-foreground: 210 40% 98%;
 
   --muted: 217 33% 17%;
@@ -110,7 +110,7 @@
 
   --border: 217 33% 20%;
   --input: 217 33% 20%;
-  --ring: 180 100% 50%;
+  --ring: 199 80% 58%;
 }
 
 @layer base {
